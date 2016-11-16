@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$("#button").click(function (){
+	$("#getAnimalsButton").click(function (){
 		$.get({
 			url: "http://localhost:8080/rst2/api/animals",
 			dataType: "json",
@@ -12,6 +12,19 @@ $(document).ready(function() {
 				});
 			}
 
+		});
+	});
+	
+	var testing = {age: "10", name: "test", type: "testt"};
+	
+	$("#addAnimalButton").click(function () {
+		$.post({
+			url: "http://localhost:8080/rst2/api/animals",
+			data: testing,
+			dataType: "json", 
+			success: function(data){
+				console.log(data);
+			}
 		});
 	});
 });
