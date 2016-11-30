@@ -27,6 +27,10 @@ buildscript {
 dependencies {
 	compile group: 'org.slf4j', name: 'slf4j-jdk14', version: '1.7.5'
 	
+	// https://mvnrepository.com/artifact/io.swagger/swagger-jersey2-jaxrs
+	compile group: 'io.swagger', name: 'swagger-jersey2-jaxrs', version: '1.5.0'
+	
+	
     compile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
     compile 'org.glassfish.jersey.core:jersey-server:2.24'
     compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.24'

@@ -5,6 +5,7 @@ import java.util.List;
 
 public class PagedResponse {
 	
+	/*
 	private List<User> data = new ArrayList<>();
 	
 	private int page;
@@ -36,7 +37,7 @@ public class PagedResponse {
 		this.totalPages = totalPages;
 	}
 	
-	
+	*/
 	
 
 }

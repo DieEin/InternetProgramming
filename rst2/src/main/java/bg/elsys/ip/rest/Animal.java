@@ -1,8 +1,16 @@
 package bg.elsys.ip.rest;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel
 public class Animal {
+	
+	@ApiModelProperty(required = true, value = "The age of the animal(an integer value).", example = "4")
 	private int age;
+	@ApiModelProperty(required = false, value = "The name of the animal if it has one.", example = "pesho")
 	private String name;
+	@ApiModelProperty(required = true, value = "The type of the animal.", example = "dog")
 	private String type;
 	
 	public Animal() {
