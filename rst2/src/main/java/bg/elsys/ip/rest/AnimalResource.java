@@ -14,9 +14,12 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @Path("/animals")
+@Api("animals")
 public class AnimalResource {
 	
 	@GET
+	@Path("/getanimals")
+	@ApiOperation(value = "get all animals", response = Animal.class, responseContainer = "List")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAnimals() {
 		
@@ -27,6 +30,8 @@ public class AnimalResource {
 	}
 	
 	@POST
+	@Path("/createanimal")
+	@ApiOperation(value = "create an animal", response = Animal.class)
 	@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	public Response createAnimal(Animal animal) {
