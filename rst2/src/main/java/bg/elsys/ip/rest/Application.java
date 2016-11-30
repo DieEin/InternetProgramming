@@ -8,6 +8,7 @@ import org.glassfish.jersey.logging.LoggingFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
 public class Application extends ResourceConfig {
+	private static final int MAX_ENTITY_SIZE = 1024 * 1024 * 5;
 	private static final Logger LOGGER = Logger.getGlobal();
 
 	public Application() {
@@ -16,6 +17,6 @@ public class Application extends ResourceConfig {
 		
 		//LOG all requests and responses
 		register(new LoggingFeature(Logger.getLogger(LoggingFeature.DEFAULT_LOGGER_NAME), Level.INFO,
-				LoggingFeature.Verbosity.PAYLOAD_ANY, 1024 * 1024 * 5));
+				LoggingFeature.Verbosity.PAYLOAD_ANY, MAX_ENTITY_SIZE));
 	}
 }

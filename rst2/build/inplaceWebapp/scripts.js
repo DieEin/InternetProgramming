@@ -15,26 +15,7 @@ $(document).ready(function() {
 		});
 	});
 	
-	function formToJSON() {
-		return JSON.stringify({
-			"age": "10",
-			"name": "testtttt",
-			"type": "testtttttttt" 
-		});
-	}
-	
-	var myarray = {"age": "10", "name": "test", "type": "testt"};
-	var testing = {"anim": myarray};
-	
-	$("#addAnimalButton").click(function () {
-		$.post({ 
-			url: "http://localhost:8080/rst2/api/animals",
-			data: formToJSON(),
-			dataType: "json",
-			contentType: "application/json",
-			success: function(data){
-				alert("Animal added successfully!!!");
-			}
-		});
+	$("#addAnimalButton").click(function() {
+		window.location.href = "http://localhost:8080/rst2/add_animal.html";
 	});
 });
