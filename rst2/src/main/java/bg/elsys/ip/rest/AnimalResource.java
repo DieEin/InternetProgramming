@@ -27,8 +27,8 @@ public class AnimalResource {
 	}
 	
 	@POST
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	public Response createAnimal(Animal animal) {
 		AnimalService.getInstance().addAnimal(animal);
 

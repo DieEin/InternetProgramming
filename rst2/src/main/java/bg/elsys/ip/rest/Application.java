@@ -16,6 +16,6 @@ public class Application extends ResourceConfig {
 		
 		//LOG all requests and responses
 		register(new LoggingFeature(Logger.getLogger(LoggingFeature.DEFAULT_LOGGER_NAME), Level.INFO,
-				LoggingFeature.Verbosity.PAYLOAD_ANY, Integer.MAX_VALUE / 2));
+				LoggingFeature.Verbosity.PAYLOAD_ANY, 1024 * 1024 * 5));
 	}
 }

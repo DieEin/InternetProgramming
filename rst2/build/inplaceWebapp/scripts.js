@@ -15,15 +15,25 @@ $(document).ready(function() {
 		});
 	});
 	
-	var testing = {age: "10", name: "test", type: "testt"};
+	function formToJSON() {
+		return JSON.stringify({
+			"age": "10",
+			"name": "testtttt",
+			"type": "testtttttttt" 
+		});
+	}
+	
+	var myarray = {"age": "10", "name": "test", "type": "testt"};
+	var testing = {"anim": myarray};
 	
 	$("#addAnimalButton").click(function () {
-		$.post({
+		$.post({ 
 			url: "http://localhost:8080/rst2/api/animals",
-			data: testing,
-			dataType: "json", 
+			data: formToJSON(),
+			dataType: "json",
+			contentType: "application/json",
 			success: function(data){
-				console.log(data);
+				alert("Animal added successfully!!!");
 			}
 		});
 	});
